@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>A propros - Hirond</title>
+        <link rel="stylesheet" href="/Paul/CSS/styles.css" />
+        <link
+            rel="icon"
+            href="/Paul/Pièce jointe/hirondelles.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <!-- Barre du logo -->
+        <header>
+            <div class="logo">
+                <a href="/Eric/HTML/accueil.html">
+                    <img
+                        src="/Paul/Pièce jointe/hirondelles.png"
+                        alt="Nom de l'entreprise"
+                    />
+                </a>
+            </div>
+        </header>
+
+        <!-- Menu avec flex -->
+        <div class="menu">
+            <a href="/Eric/HTML/accueil.html">
+                <img
+                    src="/Paul/Pièce jointe/accueil.png"
+                    alt="Accueil"
+                    class="menu-icon"
+                />
+                Accueil
+            </a>
+            <a href="/Paul/HTML/publication.html">
+                <img
+                    src="/Paul/Pièce jointe/publication.png"
+                    alt="Publication"
+                    class="menu-icon"
+                />
+                Publication
+            </a>
+            <a href="/Paul/HTML/aide.html">
+                <img
+                    src="/Paul/Pièce jointe/aide.png"
+                    alt="Aide"
+                    class="menu-icon"
+                />
+                Aide
+            </a>
+            <a href="/Nassim/HTML/abonnement.html">
+                <img
+                    src="/Paul/Pièce jointe/abonnement.png"
+                    alt="Abonnement"
+                    class="menu-icon"
+                />
+                Abonnement
+            </a>
+        </div>
+
+        <!-- Contenu principal -->
+        <main>
+            <div class="about-us">
+                <h1>À propos de nous</h1>
+                <p>
+                    Bienvenue sur Hirond, votre plateforme de discussion en
+                    ligne. Nous sommes dédiés à fournir un espace sûr et
+                    accueillant pour échanger des idées et des opinions.
+                </p>
+
+                <h2>Notre mission</h2>
+                <p>
+                    Notre mission est de créer une communauté où les gens
+                    peuvent se connecter, partager leurs expériences et
+                    apprendre les uns des autres dans un environnement
+                    respectueux et inclusif.
+                </p>
+
+                <h2>Notre équipe</h2>
+                <p>
+                    Nous sommes une équipe de passionnés de technologie et de
+                    communication, engagés à offrir une expérience utilisateur
+                    exceptionnelle. Nous croyons en l'importance de la diversité
+                    et de l'inclusion, et nous nous efforçons de refléter ces
+                    valeurs dans notre travail quotidien.
+                </p>
+
+                <h2>Nos valeurs</h2>
+                <p>Nos valeurs fondamentales sont :</p>
+                <ul>
+                    <li>
+                        Respect : Traiter chaque membre de la communauté avec
+                        dignité et respect.
+                    </li>
+                    <li>
+                        Inclusivité : Encourager la participation et l'inclusion
+                        de tous.
+                    </li>
+                    <li>Intégrité : Agir avec honnêteté et transparence.</li>
+                    <li>
+                        Innovation : Chercher continuellement à améliorer et à
+                        innover.
+                    </li>
+                </ul>
+
+                <h2>Nous contacter</h2>
+                <p>
+                    Pour toute question ou suggestion, n'hésitez pas à nous
+                    contacter via le formulaire de contact disponible sur notre
+                    site. Nous sommes toujours ravis de recevoir des retours de
+                    notre communauté.
+                </p>
+            </div>
+        </main>
+
+        <!-- Boutons en bas de page -->
+        <div class="bottom-buttons">
+            <a href="#" class="haut" id="scrollTopButton">
+                <img
+                    src="/Paul/Pièce jointe/top.png"
+                    alt="Revenir en haut de la page"
+                />
+            </a>
+            <a href="#" class="haut contact" id="contactButton">CONTACT</a>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div id="contactForm" class="popup-form">
+            <form id="contactFormElement">
+                <h2>Contactez-nous</h2>
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" />
+
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" />
+
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" />
+
+                <label for="problem">Décrivez votre problème :</label>
+                <textarea
+                    id="problem"
+                    name="problem"
+                    rows="4"
+                    cols="50"
+                ></textarea>
+
+                <button type="button" id="submitContactForm">Envoyer</button>
+                <button type="button" id="closeContactForm">Fermer</button>
+            </form>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Inclure le script principal -->
+        <script src="/Paul/JS/scripts.js"></script>
+
+        <!-- Barre de navigation en bas de page -->
+        <div class="menu bas">
+            <a href="/Paul/HTML/conditions.html">Conditions d'utilisation</a>
+            <a href="/Paul/HTML/personnel.html">Informations Personnelles</a>
+            <a href="/Paul/HTML/cookies.html">Utilisation des Cookies</a>
+            <a href="/Paul/HTML/politique.html">Politique de Confidentialité</a>
+            <a href="/Paul/HTML/propos.html">À propos de nous</a>
+        </div>
+    </body>
+</html>

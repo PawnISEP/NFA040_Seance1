@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Accueil - Hirond</title>
+        <link rel="stylesheet" href="/Eric/CSS/styles.css" />
+        <link
+            rel="icon"
+            href="/Paul/Pièce jointe/hirondelles.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body onload="displayProfileInfo()">
+        <!-- Barre du logo -->
+        <header>
+            <div class="logo">
+                <a href="/Eric/HTML/accueil.html">
+                    <img
+                        src="/Paul/Pièce jointe/hirondelles.png"
+                        alt="Nom de l'entreprise"
+                    />
+                </a>
+            </div>
+        </header>
+
+        <!-- Menu avec flex -->
+        <div class="menu">
+            <a href="/Eric/HTML/accueil.html">
+                <img
+                    src="/Paul/Pièce jointe/accueil.png"
+                    alt="Accueil"
+                    class="menu-icon"
+                />
+                Accueil
+            </a>
+            <a href="/Paul/HTML/publication.html">
+                <img
+                    src="/Paul/Pièce jointe/publication.png"
+                    alt="Publication"
+                    class="menu-icon"
+                />
+                Publication
+            </a>
+            <a href="/Paul/HTML/aide.html">
+                <img
+                    src="/Paul/Pièce jointe/aide.png"
+                    alt="Aide"
+                    class="menu-icon"
+                />
+                Aide
+            </a>
+            <a href="/Nassim/HTML/abonnement.html">
+                <img
+                    src="/Paul/Pièce jointe/abonnement.png"
+                    alt="Abonnement"
+                    class="menu-icon"
+                />
+                Abonnement
+            </a>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="interface-connection">
+            <section class="connexion">
+                <div class="pdp">
+                    <img
+                        src="/Paul/Pièce jointe/utilisateur.png"
+                        alt="Photo de profil"
+                        width="150"
+                        height="150"
+                        id="profile"
+                    />
+                    <form id="pdpForm" enctype="multipart/form-data">
+                        <input
+                            type="file"
+                            id="import"
+                            name="pdp"
+                            accept="image/*"
+                            onchange="previewFile()"
+                        />
+                        <label for="import" style="cursor: pointer"></label>
+                    </form>
+                </div>
+                <div class="identification">
+                    IDENTIFICATION
+                    <div class="annonyme">
+                        <label for="pseudo">Votre Pseudo :</label>
+                        <input type="text" id="pseudo" name="pseudo" />
+                        <button type="button" onclick="savePseudo()">OK</button>
+                    </div>
+                    <button onclick="location.href = '/Eric/HTML/abonne.html';">
+                        Vous avez un compte ? Se connecter
+                    </button>
+                    <button
+                        onclick="location.href = '/Nassim/HTML/abonnement.html';"
+                    >
+                        Souscrire à un abonnement
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <main>
+            <h3>Hirond</h3>
+            <p>
+                Bienvenue chez Hirond, une société française dédiée à la
+                création d'un réseau social unique, offrant une expérience
+                purement française mais accessible à tous les Européens.
+            </p>
+            <p>
+                Notre plateforme se distingue par son approche novatrice : pas
+                besoin de créer un compte pour participer aux discussions !
+            </p>
+            <p>
+                Chez Hirond, nous croyons en la liberté d'expression sans les
+                barrières traditionnelles des comptes utilisateurs. Ce qui nous
+                différencie, c'est notre engagement à protéger la vie privée de
+                nos utilisateurs. Contrairement à d'autres réseaux sociaux, nous
+                ne stockons aucune donnée personnelle. Votre vie numérique reste
+                totalement privée lorsque vous utilisez notre plateforme.
+            </p>
+            <p>
+                Rejoignez-nous dès aujourd'hui pour faire partie d'une
+                communauté dynamique, où le partage d'idées et les conversations
+                animées se déroulent en toute liberté et en toute sécurité. Chez
+                Hirond, c'est votre voix qui compte, sans compromis sur votre
+                vie privée.
+            </p>
+        </main>
+
+        <div class="rubrique-container">
+            <div class="rubrique">
+                <img src="/Paul/Pièce jointe/europe.png" />
+                <h2>Un réseau social Européeen</h2>
+                <p>
+                    Nous sommes le seul réseau social européen. Fondés et basés
+                    en Europe, nous adhérons strictement aux réglementations
+                    comme le RGPD, garantissant une protection optimale des
+                    données personnelles. Nos valeurs de diversité et
+                    d'inclusion créent un espace en ligne sûr et accueillant. En
+                    soutenant l'innovation locale, nous investissons dans les
+                    talents et technologies européens. De plus, nous offrons des
+                    fonctionnalités et un support multilingue, adaptés aux
+                    diversités culturelles du continent.
+                </p>
+            </div>
+
+            <div class="rubrique">
+                <img src="/Paul/Pièce jointe/respect.png" />
+                <h2>Respect des données</h2>
+                <p>
+                    Nous sommes le seul réseau social européen à ne prendre
+                    aucune donnée des utilisateurs. Basés en Europe, nous
+                    respectons strictement les réglementations de
+                    confidentialité comme le RGPD. Nous créons un espace en
+                    ligne sûr et accueillant, sans collecter ni utiliser vos
+                    informations personnelles. Nos valeurs de transparence et de
+                    respect de la vie privée sont au cœur de notre mission.
+                    Profitez de notre plateforme en toute sérénité, sachant que
+                    vos données restent entièrement privées.
+                </p>
+            </div>
+
+            <div class="rubrique">
+                <img src="/Paul/Pièce jointe/facile.png" />
+                <h2>Simple d'utilisation</h2>
+                <p>
+                    Nous sommes le seul réseau social européen simple
+                    d'utilisation. Basés en Europe, nous avons conçu notre
+                    plateforme pour être intuitive et accessible à tous. Nos
+                    interfaces claires et conviviales permettent à chacun de
+                    naviguer et d'interagir facilement. En plus de notre
+                    simplicité, nous respectons strictement les réglementations
+                    de confidentialité comme le RGPD, garantissant une
+                    expérience sécurisée et privée. Profitez d'une utilisation
+                    fluide et sans tracas, tout en sachant que vos données sont
+                    protégées.
+                </p>
+            </div>
+
+            <div class="rubrique">
+                <img src="/Paul/Pièce jointe/innovant.png" />
+                <h2>Innovant</h2>
+                <p>
+                    Nous nous engageons à rester à la pointe de l'innovation
+                    pour vous offrir la meilleure expérience utilisateur
+                    possible. Des mises à jour régulières et des fonctionnalités
+                    innovantes sont au cœur de notre démarche pour répondre aux
+                    besoins changeants de notre communauté.
+                </p>
+            </div>
+
+            <div class="rubrique">
+                <img
+                    src="/Paul/Pièce jointe/publicite.png"
+                    alt="Support Technique"
+                />
+                <h2>Plateforme sans publicité intrusive</h2>
+                <p>
+                    Dites adieu aux publicités envahissantes et intrusives. En
+                    tant que réseau social européen, nous ne dépendons pas de la
+                    publicité pour générer des revenus. Notre modèle économique
+                    est axé sur l'expérience utilisateur, vous offrant une
+                    plateforme sans distractions ni interruptions.
+                </p>
+            </div>
+
+            <div class="rubrique">
+                <img src="/Paul/Pièce jointe/support.png" alt="FAQ" />
+                <h2>Support technique</h2>
+                <p>
+                    Votre satisfaction est notre priorité absolue. Notre équipe
+                    de support technique dévouée est là pour vous aider à
+                    résoudre tout problème technique que vous pourriez
+                    rencontrer.
+                </p>
+            </div>
+        </div>
+
+        <!-- Boutons en bas de page -->
+        <div class="bottom-buttons">
+            <a href="#" class="haut" id="scrollTopButton">
+                <img
+                    src="/Paul/Pièce jointe/top.png"
+                    alt="Revenir en haut de la page"
+                />
+            </a>
+            <a href="#" class="haut contact" id="contactButton">CONTACT</a>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div id="contactForm" class="popup-form">
+            <form id="contactFormElement">
+                <h2>Contactez-nous</h2>
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" />
+
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" />
+
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" />
+
+                <label for="problem">Décrivez votre problème :</label>
+                <textarea
+                    id="problem"
+                    name="problem"
+                    rows="4"
+                    cols="50"
+                ></textarea>
+
+                <button type="button" id="submitContactForm">Envoyer</button>
+                <button type="button" id="closeContactForm">Fermer</button>
+            </form>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Inclure le script principal -->
+        <script src="/Paul/JS/scripts.js"></script>
+        <script src="/Eric/JS/accueil.js"></script>
+
+        <!-- Barre de navigation en bas de page -->
+        <div class="menu bas">
+            <a href="/Paul/HTML/conditions.html">Conditions d'utilisation</a>
+            <a href="/Paul/HTML/personnel.html">Informations Personnelles</a>
+            <a href="/Paul/HTML/cookies.html">Utilisation des Cookies</a>
+            <a href="/Paul/HTML/politique.html">Politique de Confidentialité</a>
+            <a href="/Paul/HTML/propos.html">À propos de nous</a>
+        </div>
+    </body>
+</html>

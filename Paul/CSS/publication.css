@@ -1,0 +1,397 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #80ebf93e;
+}
+
+/* Barre du logo */
+header {
+    background-color: #1b4423;
+    text-align: center;
+}
+
+header .logo img {
+    width: 70px;
+}
+
+/* Menu avec flex */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #1b4423;
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* Centrer verticalement les éléments */
+}
+
+.menu a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Espace entre l'image et le texte */
+}
+
+.menu a:hover {
+    background-color: #7cfac4;
+}
+
+/* Contenu principal */
+main {
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+/* Nouvelle publication */
+.nouvelle-publication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nouvelle-publication textarea {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 5px solid #2d3439;
+    border-radius: 7px;
+    resize: none;
+    font-size: 16px;
+}
+
+.nouvelle-publication button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nouvelle-publication img {
+    height: 60px;
+    border: 5px solid #2d3439;
+    background-color: #1b4423;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nouvelle-publication button:hover,
+.nouvelle-publication img:hover {
+    background-color: #7cfac4;
+    transform: scale(1.05);
+}
+
+/* Conteneur des publications */
+#conteneurPublications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 61.25%;
+    margin-left: 240px;
+    margin-right: auto;
+}
+
+/* Conteneur de chaque publication */
+.publication-conteneur {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+/* Conteneur des photos */
+.photo-conteneur {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Style des publications */
+.publication {
+    display: flex;
+    align-items: center;
+    border: 5px solid #2d3439;
+    border-radius: 7px;
+    background-color: white;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease;
+    flex: 1;
+    font-size: 16px;
+}
+
+.publication.active {
+    opacity: 1;
+}
+
+.publications {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+/* Bouton signalement */
+.bouton-signalement {
+    position: absolute;
+    right: -75px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: 5px solid #2d3439;
+    border-radius: 7px;
+    background-color: #1b4423;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.5s;
+    opacity: 1;
+}
+
+.bouton-signalement img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bouton-signalement:hover {
+    background-color: #7cfac4;
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+/* Bouton afficher */
+.bouton-afficher {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bouton-afficher:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+/* Boutons en bas de page */
+.boutons-bas {
+    position: fixed;
+    bottom: 73px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.haut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1b4423;
+    text-align: center;
+    text-decoration: none;
+}
+
+.haut img {
+    width: 100%;
+    height: 100%;
+}
+
+.haut.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    color: white;
+    background-color: #1b4423;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.haut:hover,
+.haut.contact:hover {
+    background-color: #7cfac4;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Formulaire popup */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #2d3439;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    max-width: 100%;
+}
+
+.popup-form h2 {
+    margin-top: 0;
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="email"],
+.popup-form textarea,
+.popup-form select {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.popup-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 5px;
+}
+
+/* Bouton envoyer du formulaire de contact */
+#envoyerFormulaireContact {
+    background-color: #1b4423;
+    color: white;
+}
+
+#envoyerFormulaireContact:hover {
+    background-color: #7cfac4;
+    transform: scale(1.05);
+}
+
+/* Bouton fermer du formulaire de contact */
+#fermerFormulaireContact {
+    background-color: #2d3439;
+    color: white;
+}
+
+#fermerFormulaireContact:hover {
+    background-color: #7cfac4;
+    transform: scale(1.05);
+}
+
+/* Bouton envoyer du formulaire de signalement */
+#envoyerFormulaireSignalement {
+    background-color: #1b4423;
+    color: white;
+}
+
+#envoyerFormulaireSignalement:hover {
+    background-color: #7cfac4;
+    transform: scale(1.05);
+}
+
+/* Bouton effacer autre raison */
+#effacerAutreRaison {
+    background-color: #2d3439;
+    color: white;
+}
+
+#effacerAutreRaison:hover {
+    background-color: #7cfac4;
+    transform: scale(1.05);
+}
+
+/* Bouton fermer du formulaire de signalement */
+#fermerFormulaireSignalement {
+    background-color: #2d3439;
+    color: white;
+}
+
+#fermerFormulaireSignalement:hover {
+    background-color: #7cfac4;
+    transform: scale(1.05);
+}
+
+/* Notification */
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 73px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1b4423;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Barre de navigation en bas de page */
+.menu.bas {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.pseudo-style {
+    font-weight: bold;
+}
+
+.pseudo-style::before {
+    content: "[";
+}
+
+.pseudo-style::after {
+    content: "] : \A \A";
+    white-space: pre;
+}

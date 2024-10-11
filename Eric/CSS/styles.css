@@ -1,0 +1,410 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #80ebf93e;
+}
+
+/* Barre du logo */
+header {
+  background-color: #1b4423;
+  text-align: center;
+}
+
+header .logo img {
+  width: 70px;
+}
+
+/* Menu avec flex */
+.menu {
+  display: flex;
+  justify-content: center;
+  background-color: #1b4423;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.menu a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.menu a:hover {
+  background-color: #7cfac4;
+}
+
+/* Contenu principal */
+main {
+  padding: 20px;
+  text-align: left;
+  background-color: white;
+  border: 5px solid #2d3439;
+  border-radius: 7px;
+  margin: 20px auto;
+  width: 85%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 80px;
+}
+
+.main1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+main h1,
+main h2 {
+  color: #1b4423;
+}
+
+main p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+main ul {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+  padding-left: 20px;
+}
+
+main ul li {
+  list-style-type: disc;
+}
+
+/* Rubrique Container */
+.rubrique-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 100px 100px;
+  width: 85%;
+  margin-bottom: 150px;
+  margin-top: 30px;
+}
+
+.rubrique {
+  border: 5px solid #2d3439;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.rubrique img {
+  width: 75%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.rubrique h2 {
+  color: #1b4423;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.rubrique p {
+  color: #333;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+/* Boutons en bas de page */
+.bottom-buttons {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.haut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #1b4423;
+  text-align: center;
+  text-decoration: none;
+}
+
+.haut img {
+  width: 100%;
+  height: 100%;
+}
+
+.haut.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  color: white;
+  background-color: #1b4423;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.haut:hover,
+.haut.contact:hover {
+  background-color: #7cfac4;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Formulaire de contact */
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 5px solid #2d3439;
+  border-radius: 7px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 1000px;
+  max-width: 100%;
+}
+
+.popup-form h2 {
+  margin-top: 0;
+}
+
+.popup-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.popup-form input[type="text"],
+.popup-form input[type="email"],
+.popup-form textarea,
+.popup-form select {
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.popup-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-right: 5px;
+}
+
+#submitContactForm {
+  background-color: #1b4423;
+  color: white;
+}
+
+#submitContactForm:hover {
+  background-color: #7cfac4;
+  transform: scale(1.05);
+}
+
+#closeContactForm {
+  background-color: #2d3439;
+  color: white;
+}
+
+#closeContactForm:hover {
+  background-color: #7cfac4;
+  transform: scale(1.05);
+}
+
+.notification {
+  display: none;
+  position: fixed;
+  bottom: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1b4423;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+  display: block;
+  opacity: 1;
+}
+
+.notification.hide {
+  opacity: 0;
+}
+
+/* Barre de navigation en bas de page */
+.menu.bas {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1b4423;
+  padding: 10px;
+}
+
+.menu.bas a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.menu.bas a:hover {
+  background-color: #7cfac4;
+}
+
+.connexion {
+  display: block;
+  background-color: white;
+  border: 5px solid #2d3439;
+  border-radius: 7px;
+  padding: 20px;
+  overflow: auto;
+  
+}
+
+.pdp {
+  float: left;
+  margin: 10px;
+  padding: auto;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+}
+
+.identification {
+  float: right;
+  margin: 10px;
+  border: 8px solid #2d3439;
+  padding: 10px;
+  border-radius: 7px;
+  text-align: center;
+  width: 500px;
+  height: 120px;
+  
+}
+
+.identification {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #2d3439;
+  
+}
+
+.identification button,
+.identification {
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #919191;
+  text-decoration: none;
+}
+
+.annonyme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.annonyme label {
+  margin-right: 10px;
+}
+
+.annonyme input {
+  margin-right: 10px;
+}
+
+.info {
+  display: inline-block;
+  border: 3px solid #000;
+  padding: 10px;
+  overflow: visible;
+  margin: 31px;
+  width: 25%;
+  height: auto;
+}
+
+.espace {
+  padding: 5%;
+}
+
+.p3 {
+  background-color: white;
+  color: black;
+  width: 100%;
+  padding: 10px;
+  font: 20px Arial, Helvetica, sans-serif;
+}
+
+.abonne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.abonne label {
+  margin: 0 5px;
+}
+
+.abonne input {
+  margin-right: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.interface-connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 780px; /* Réduit la largeur maximale */
+    margin: 20px auto;
+    padding: 10px; /* Réduit le padding */
+    text-align: center;
+    font-size: 0.9em; /* Réduit la taille de la police */
+}

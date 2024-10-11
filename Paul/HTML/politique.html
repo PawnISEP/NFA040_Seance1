@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Politique de Confidentialité - Hirond</title>
+        <link rel="stylesheet" href="/Paul/CSS/styles.css" />
+        <link
+            rel="icon"
+            href="/Paul/Pièce jointe/hirondelles.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <!-- Barre du logo -->
+        <header>
+            <div class="logo">
+                <a href="/Eric/HTML/accueil.html">
+                    <img
+                        src="/Paul/Pièce jointe/hirondelles.png"
+                        alt="Nom de l'entreprise"
+                    />
+                </a>
+            </div>
+        </header>
+
+        <!-- Menu avec flex -->
+        <div class="menu">
+            <a href="/Eric/HTML/accueil.html">
+                <img
+                    src="/Paul/Pièce jointe/accueil.png"
+                    alt="Accueil"
+                    class="menu-icon"
+                />
+                Accueil
+            </a>
+            <a href="/Paul/HTML/publication.html">
+                <img
+                    src="/Paul/Pièce jointe/publication.png"
+                    alt="Publication"
+                    class="menu-icon"
+                />
+                Publication
+            </a>
+            <a href="/Paul/HTML/aide.html">
+                <img
+                    src="/Paul/Pièce jointe/aide.png"
+                    alt="Aide"
+                    class="menu-icon"
+                />
+                Aide
+            </a>
+            <a href="/Nassim/HTML/abonnement.html">
+                <img
+                    src="/Paul/Pièce jointe/abonnement.png"
+                    alt="Abonnement"
+                    class="menu-icon"
+                />
+                Abonnement
+            </a>
+        </div>
+
+        <!-- Contenu principal -->
+        <main>
+            <div class="privacy-policy">
+                <h1>Politique de Confidentialité</h1>
+                <p>
+                    Nous prenons très au sérieux la protection de vos données
+                    personnelles. Cette politique de confidentialité explique
+                    quelles informations nous recueillons, comment nous les
+                    utilisons et les mesures que nous prenons pour les protéger.
+                </p>
+
+                <h2>1. Collecte des informations</h2>
+                <p>
+                    Nous recueillons des informations lorsque vous vous
+                    inscrivez sur notre site, vous connectez à votre compte ou
+                    publiez un message. Ces informations recueillis incluent
+                    votre pseudonyme, votre adresse e-mail, votre localisation
+                    et votre carte de crédit.
+                </p>
+
+                <h2>2. Utilisation des informations</h2>
+                <p>
+                    Les informations que nous recueillons sont utilisées pour :
+                </p>
+                <ul>
+                    <li>Fournir et améliorer nos services</li>
+                    <li>Personnaliser votre expérience utilisateur</li>
+                    <li>
+                        Vous contacter à propos de vos commandes et de nos
+                        services
+                    </li>
+                    <li>Respecter nos obligations légales</li>
+                    <li>
+                        Vous contactez à propos de nos services et mises a jour
+                    </li>
+                </ul>
+
+                <h2>3. Partage des informations</h2>
+                <p>
+                    Nous ne vendons, n'échangeons et ne transférons pas vos
+                    informations personnelles à des tiers sans votre
+                    consentement, sauf pour :
+                </p>
+                <ul>
+                    <li>Fournir des services que vous avez demandés</li>
+                    <li>Respecter les exigences légales</li>
+                    <li>Protéger nos droits et ceux de nos utilisateurs</li>
+                </ul>
+
+                <h2>4. Sécurité des informations</h2>
+                <p>
+                    Nous mettons en œuvre diverses mesures de sécurité pour
+                    garantir la protection de vos informations personnelles. Vos
+                    informations personnelles sont stockées sur des réseaux
+                    sécurisés et ne sont accessibles qu'à un nombre limité de
+                    personnes ayant des droits d'accès spéciaux.
+                </p>
+
+                <h2>5. Vos droits</h2>
+                <p>
+                    Vous avez le droit d'accéder, de rectifier ou de supprimer
+                    vos informations personnelles que nous détenons. Vous pouvez
+                    également vous opposer au traitement de vos données
+                    personnelles ou demander la limitation de leur traitement.
+                </p>
+
+                <h2>6. Modifications de la politique</h2>
+                <p>
+                    Nous nous réservons le droit de modifier cette politique de
+                    confidentialité à tout moment. Les modifications seront
+                    publiées sur cette page et, si les changements sont
+                    significatifs, nous fournirons un avis plus visible.
+                </p>
+
+                <h2>7. Contactez-nous</h2>
+                <p>
+                    Pour toute question concernant cette politique de
+                    confidentialité, veuillez nous contacter via le formulaire
+                    de contact disponible sur notre site.
+                </p>
+            </div>
+        </main>
+
+        <!-- Boutons en bas de page -->
+        <div class="bottom-buttons">
+            <a href="#" class="haut" id="scrollTopButton">
+                <img
+                    src="/Paul/Pièce jointe/top.png"
+                    alt="Revenir en haut de la page"
+                />
+            </a>
+            <a href="#" class="haut contact" id="contactButton">CONTACT</a>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div id="contactForm" class="popup-form">
+            <form id="contactFormElement">
+                <h2>Contactez-nous</h2>
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" />
+
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" />
+
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" />
+
+                <label for="problem">Décrivez votre problème :</label>
+                <textarea
+                    id="problem"
+                    name="problem"
+                    rows="4"
+                    cols="50"
+                ></textarea>
+
+                <button type="button" id="submitContactForm">Envoyer</button>
+                <button type="button" id="closeContactForm">Fermer</button>
+            </form>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Inclure le script principal -->
+        <script src="/Paul/JS/scripts.js"></script>
+
+        <!-- Barre de navigation en bas de page -->
+        <div class="menu bas">
+            <a href="/Paul/HTML/conditions.html">Conditions d'utilisation</a>
+            <a href="/Paul/HTML/personnel.html">Informations Personnelles</a>
+            <a href="/Paul/HTML/cookies.html">Utilisation des Cookies</a>
+            <a href="/Paul/HTML/politique.html">Politique de Confidentialité</a>
+            <a href="/Paul/HTML/propos.html">À propos de nous</a>
+        </div>
+    </body>
+</html>

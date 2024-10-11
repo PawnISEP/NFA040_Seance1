@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Publication - Hirond</title>
+        <link rel="stylesheet" href="/Paul/CSS/publication.css" />
+        <link
+            rel="icon"
+            href="/Paul/Pièce jointe/hirondelles.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <!-- Barre du logo -->
+        <header>
+            <div class="logo">
+                <a href="/Eric/HTML/accueil.html">
+                    <img
+                        src="/Paul/Pièce jointe/hirondelles.png"
+                        alt="Nom de l'entreprise"
+                    />
+                </a>
+            </div>
+        </header>
+
+        <!-- Menu avec flex -->
+        <div class="menu">
+            <a href="/Eric/HTML/accueil.html">
+                <img
+                    src="/Paul/Pièce jointe/accueil.png"
+                    alt="Accueil"
+                    class="menu-icon"
+                />
+                Accueil
+            </a>
+            <a href="/Paul/HTML/publication.html">
+                <img
+                    src="/Paul/Pièce jointe/publication.png"
+                    alt="Publication"
+                    class="menu-icon"
+                />
+                Publication
+            </a>
+            <a href="/Paul/HTML/aide.html">
+                <img
+                    src="/Paul/Pièce jointe/aide.png"
+                    alt="Aide"
+                    class="menu-icon"
+                />
+                Aide
+            </a>
+            <a href="/Nassim/HTML/abonnement.html">
+                <img
+                    src="/Paul/Pièce jointe/abonnement.png"
+                    alt="Abonnement"
+                    class="menu-icon"
+                />
+                Abonnement
+            </a>
+        </div>
+
+        <!-- Contenu principal -->
+        <main>
+            <div class="nouvelle-publication">
+                <textarea
+                    id="contenuPublication"
+                    placeholder="Publier ici"
+                ></textarea>
+                <button id="boutonPublication">
+                    <img src="/Paul/Pièce jointe/poster.png" alt="Poster" />
+                </button>
+            </div>
+            <div id="conteneurPublications"></div>
+        </main>
+
+        <!-- Boutons en bas de page -->
+        <div class="boutons-bas">
+            <a href="#" class="haut" id="boutonHautPage">
+                <img
+                    src="/Paul/Pièce jointe/top.png"
+                    alt="Revenir en haut de la page"
+                />
+            </a>
+            <a href="#" class="haut contact" id="boutonContact">CONTACT</a>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div id="formulaireContact" class="popup-form">
+            <form>
+                <h2>Contactez-nous</h2>
+                <label for="nom">Votre nom :</label>
+                <input type="text" id="nom" name="nom" />
+
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" />
+
+                <label for="sujet">Sujet :</label>
+                <input type="text" id="sujet" name="sujet" />
+
+                <label for="probleme">Décrivez votre problème :</label>
+                <textarea
+                    id="probleme"
+                    name="probleme"
+                    rows="4"
+                    cols="50"
+                ></textarea>
+
+                <button type="button" id="envoyerFormulaireContact">
+                    Envoyer
+                </button>
+                <button type="button" id="fermerFormulaireContact">
+                    Fermer
+                </button>
+            </form>
+        </div>
+
+        <!-- Formulaire de signalement -->
+        <div id="formulaireSignalement" class="popup-form">
+            <form>
+                <h2>Signaler ce post</h2>
+                <label for="raisonSignalement">Raison :</label>
+                <select id="raisonSignalement">
+                    <option value="spam">Spam</option>
+                    <option value="harcelement">Harcèlement</option>
+                    <option value="discoursHaineux">Discours haineux</option>
+                    <option value="informationErronee">
+                        Information erronée
+                    </option>
+                    <option value="autre">Autre</option>
+                </select>
+
+                <div id="autreRaisonConteneur" style="display: none">
+                    <label for="autreRaison">Autre raison :</label>
+                    <textarea id="autreRaison" rows="4" cols="50"></textarea>
+                </div>
+
+                <button type="button" id="envoyerFormulaireSignalement">
+                    Envoyer
+                </button>
+                <button
+                    type="button"
+                    id="effacerAutreRaison"
+                    style="display: none"
+                >
+                    Effacer
+                </button>
+                <button type="button" id="fermerFormulaireSignalement">
+                    Fermer
+                </button>
+            </form>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Ajouter un élément audio pour le son de publication -->
+        <audio
+            id="publicationSound"
+            src="/Paul/Pièce jointe/son.mp3"
+            preload="auto"
+        ></audio>
+
+        <!-- Inclure Socket.IO client -->
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- Inclure le script principal -->
+        <script src="/Paul/JS/publication.js"></script>
+
+        <!-- Barre de navigation en bas de page -->
+        <div class="menu bas">
+            <a href="/Paul/HTML/conditions.html">Conditions d'utilisation</a>
+            <a href="/Paul/HTML/personnel.html">Informations Personnelles</a>
+            <a href="/Paul/HTML/cookies.html">Utilisation des Cookies</a>
+            <a href="/Paul/HTML/politique.html">Politique de Confidentialité</a>
+            <a href="/Paul/HTML/propos.html">À propos de nous</a>
+        </div>
+    </body>
+</html>

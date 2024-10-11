@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookies - Hirond</title>
+        <link rel="stylesheet" href="/Paul/CSS/styles.css" />
+        <link
+            rel="icon"
+            href="/Paul/Pièce jointe/hirondelles.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <!-- Barre du logo -->
+        <header>
+            <div class="logo">
+                <a href="/Eric/HTML/accueil.html">
+                    <img
+                        src="/Paul/Pièce jointe/hirondelles.png"
+                        alt="Nom de l'entreprise"
+                    />
+                </a>
+            </div>
+        </header>
+
+        <!-- Menu avec flex -->
+        <div class="menu">
+            <a href="/Eric/HTML/accueil.html">
+                <img
+                    src="/Paul/Pièce jointe/accueil.png"
+                    alt="Accueil"
+                    class="menu-icon"
+                />
+                Accueil
+            </a>
+            <a href="/Paul/HTML/publication.html">
+                <img
+                    src="/Paul/Pièce jointe/publication.png"
+                    alt="Publication"
+                    class="menu-icon"
+                />
+                Publication
+            </a>
+            <a href="/Paul/HTML/aide.html">
+                <img
+                    src="/Paul/Pièce jointe/aide.png"
+                    alt="Aide"
+                    class="menu-icon"
+                />
+                Aide
+            </a>
+            <a href="/Nassim/HTML/abonnement.html">
+                <img
+                    src="/Paul/Pièce jointe/abonnement.png"
+                    alt="Abonnement"
+                    class="menu-icon"
+                />
+                Abonnement
+            </a>
+        </div>
+
+        <!-- Contenu principal -->
+        <main>
+            <div class="cookies">
+                <h1>Utilisation des Cookies</h1>
+                <p>
+                    Notre site utilise des cookies pour améliorer votre
+                    expérience. Cette page explique ce que sont les cookies,
+                    comment nous les utilisons et comment vous pouvez les
+                    contrôler.
+                </p>
+
+                <h2>1. Que sont les cookies ?</h2>
+                <p>
+                    Les cookies sont de petits fichiers texte qui sont stockés
+                    sur votre appareil lorsque vous visitez un site Web. Ils
+                    permettent au site de se souvenir de vos actions et
+                    préférences (comme la connexion, la langue, etc.) sur une
+                    période donnée, afin que vous n'ayez pas à les saisir de
+                    nouveau chaque fois que vous revenez sur le site ou naviguez
+                    d'une page à une autre.
+                </p>
+
+                <h2>2. Comment utilisons-nous les cookies ?</h2>
+                <p>Nous utilisons les cookies pour :</p>
+                <ul>
+                    <li>Garder une trace de vos préférences utilisateur</li>
+                    <li>Fournir un contenu personnalisé</li>
+                    <li>Analyser notre trafic</li>
+                    <li>Améliorer la sécurité du site</li>
+                </ul>
+
+                <h2>3. Contrôler les cookies</h2>
+                <p>
+                    Vous pouvez contrôler et/ou supprimer des cookies comme vous
+                    le souhaitez. Vous pouvez supprimer tous les cookies déjà
+                    stockés sur votre ordinateur et configurer la plupart des
+                    navigateurs pour empêcher leur enregistrement. Cependant, si
+                    vous faites cela, il se peut que vous deviez ajuster
+                    manuellement certaines préférences chaque fois que vous
+                    visitez un site et que certains services et fonctionnalités
+                    ne fonctionnent pas.
+                </p>
+
+                <h2>4. Cookies tiers</h2>
+                <p>
+                    Nous pouvons également utiliser divers services tiers qui
+                    eux aussi utilisent des cookies. Ces cookies sont
+                    généralement utilisés pour suivre les performances du site,
+                    comme le nombre de visiteurs et les pages les plus visitées.
+                    Ces informations sont anonymisées et ne contiennent pas
+                    d'informations personnelles identifiables.
+                </p>
+
+                <h2>5. Consentement</h2>
+                <p>
+                    En utilisant notre site, vous consentez à l'utilisation de
+                    cookies conformément à cette politique de cookies.
+                </p>
+
+                <h2>6. Modifications de notre politique de cookies</h2>
+                <p>
+                    Nous pouvons mettre à jour cette politique de cookies de
+                    temps en temps. Toute modification sera publiée sur cette
+                    page.
+                </p>
+
+                <h2>7. Contactez-nous</h2>
+                <p>
+                    Si vous avez des questions concernant notre politique de
+                    cookies, vous pouvez nous contacter via le formulaire de
+                    contact disponible sur notre site.
+                </p>
+            </div>
+        </main>
+
+        <!-- Boutons en bas de page -->
+        <div class="bottom-buttons">
+            <a href="#" class="haut" id="scrollTopButton">
+                <img
+                    src="/Paul/Pièce jointe/top.png"
+                    alt="Revenir en haut de la page"
+                />
+            </a>
+            <a href="#" class="haut contact" id="contactButton">CONTACT</a>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div id="contactForm" class="popup-form">
+            <form id="contactFormElement">
+                <h2>Contactez-nous</h2>
+                <label for="name">Votre nom :</label>
+                <input type="text" id="name" name="name" />
+
+                <label for="email">Votre email :</label>
+                <input type="email" id="email" name="email" />
+
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" />
+
+                <label for="problem">Décrivez votre problème :</label>
+                <textarea
+                    id="problem"
+                    name="problem"
+                    rows="4"
+                    cols="50"
+                ></textarea>
+
+                <button type="button" id="submitContactForm">Envoyer</button>
+                <button type="button" id="closeContactForm">Fermer</button>
+            </form>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+
+        <!-- Inclure le script principal -->
+        <script src="/Paul/JS/scripts.js"></script>
+
+        <!-- Barre de navigation en bas de page -->
+        <div class="menu bas">
+            <a href="/Paul/HTML/conditions.html">Conditions d'utilisation</a>
+            <a href="/Paul/HTML/personnel.html">Informations Personnelles</a>
+            <a href="/Paul/HTML/cookies.html">Utilisation des Cookies</a>
+            <a href="/Paul/HTML/politique.html">Politique de Confidentialité</a>
+            <a href="/Paul/HTML/propos.html">À propos de nous</a>
+        </div>
+    </body>
+</html>

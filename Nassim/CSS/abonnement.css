@@ -1,0 +1,433 @@
+/* Définition des variables CSS */
+:root {
+    --color-primary: #1b4423;
+    --color-secondary: #7cfac4;
+    --color-background: #80ebf93e;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-white: #fff;
+    --border-radius: 5px;
+    --transition: 0.3s;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+}
+
+.conteneur {
+    background-color: var(--color-white);
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 20px auto;
+    border: 5px solid #2d3439;
+    padding-bottom: 25px;
+    margin-bottom: 80px; /* Ajoute une marge en bas du contenu principal */
+}
+
+/* Barre du logo */
+header {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 10px;
+}
+
+header .logo img {
+    width: 70px;
+}
+
+header h1, .page-header h1 {
+    font-size: 2em;
+    color: var(--color-white);
+}
+
+header p, .page-header p {
+    font-size: 1em;
+    color: var(--color-white);
+}
+
+
+/* Menu avec flex */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+    padding: 10px;
+}
+
+.menu a {
+    color: var(--color-white);
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.menu a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.menu a:hover, .menu a:focus {
+    background-color: var(--color-secondary);
+    outline: none;
+}
+
+/* Contenu principal */
+
+main {
+    padding: 20px;
+    text-align: left;
+    background-color: var(--color-white);
+    border: 5px solid var(--color-text);
+    border-radius: var(--border-radius);
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 80px;
+}
+
+main h1, main h2 {
+    color: var(--color-primary);
+}
+
+main p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+main ul {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--color-text);
+    padding-left: 20px;
+}
+
+main ul li {
+    list-style-type: disc;
+}
+
+/* Boutons en bas de page */
+.bottom-buttons {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.haut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.haut img {
+    width: 100%;
+    height: 100%;
+}
+
+.haut.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.haut:hover, .haut.contact:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+}
+
+.haut:focus, .haut.contact:focus {
+    outline: none;
+    background-color: var(--color-secondary);
+}
+
+/* Formulaire de contact */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-white);
+    border: 5px solid var(--color-text);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    max-width: 100%;
+}
+
+.popup-form h2 {
+    margin-top: 0;
+}
+
+.popup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.popup-form input[type="text"], .popup-form input[type="email"], .popup-form textarea, .popup-form select {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+.popup-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+    margin-right: 5px;
+}
+
+#submitContactForm {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+#submitContactForm:hover, #submitContactForm:focus {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+    outline: none;
+}
+
+#closeContactForm {
+    background-color: var(--color-text);
+    color: var(--color-white);
+}
+
+#closeContactForm:hover, #closeContactForm:focus {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+    outline: none;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 73px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.show {
+    display: block;
+    opacity: 1;
+}
+
+.notification.hide {
+    opacity: 0;
+}
+
+/* Barre de navigation en bas de page */
+.menu.bas {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-primary);
+    padding: 10px;
+}
+
+.menu.bas a {
+    color: var(--color-white);
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color var(--transition);
+}
+
+.menu.bas a:hover, .menu.bas a:focus {
+    background-color: var(--color-secondary);
+    outline: none;
+}
+
+/* Styles spécifiques pour abonnement.html */
+.avantages {
+    margin-bottom: 2em;
+}
+
+.avantages h2 {
+    font-size: 1.5em;
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+}
+
+.avantages ul {
+  list-style: none;
+  padding: 0; /* Enlever le padding par défaut de la liste */
+  text-align: left; /* Aligner le texte à gauche */
+}
+
+.avantages li {
+  background: #e0f7fa;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border-radius: var(--border-radius);
+  color: #00796b;
+  text-align: left; /* Aligner le texte à gauche */
+}
+
+.formulaire-abonnement h2 {
+    font-size: 1.5em;
+    color: var(--color-primary);
+    margin-bottom: 1em;
+}
+
+.formulaire-abonnement form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire-abonnement label {
+    margin-bottom: 0.5em;
+    color: var(--color-text-light);
+}
+
+
+.formulaire-abonnement input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+.formulaire-abonnement select {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    height: 40px;
+}
+
+.formulaire-abonnement button {
+    margin: 15px;
+    padding: 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.formulaire-abonnement button:hover, .formulaire-abonnement button:focus {
+    background-color: var(--color-secondary);
+    outline: none;
+}
+
+/* Styles spécifiques pour paiement.html */
+.options-paiement {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+
+.options-paiement button {
+    padding: 1em;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition);
+}
+
+.options-paiement button:hover, .options-paiement button:focus {
+    background-color: var(--color-secondary);
+    outline: none;
+}
+
+.formulaire-paiement {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.formulaire-paiement.actif {
+    display: flex;
+}
+
+.formulaire-paiement label {
+    margin-bottom: 0.5em;
+    color: var(--color-text-light);
+}
+
+.formulaire-paiement input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    width: 100%;
+    max-width: 300px;
+}
+
+.formulaire-paiement button {
+    padding: 1em;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color var(--transition);
+    margin-top: 1em;
+}
+
+.formulaire-paiement button:hover, .formulaire-paiement button:focus {
+    background-color: var(--color-secondary);
+    outline: none;
+}
+
+#details-abonnement {
+    margin-bottom: 2em;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.page-description {
+    font-size: 1.2em;
+    color: var(--color-white);
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
